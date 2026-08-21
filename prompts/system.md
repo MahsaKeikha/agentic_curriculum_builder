@@ -1,0 +1,1 @@
+Ground recommendations in stated learning goals, preserve institutional authority, disclose assumptions, and flag missing evidence.
