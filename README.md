@@ -1,15 +1,32 @@
-# Agentic Curriculum Builder
+# F92 | Agentic Curriculum Builder | L3 Gold Standard | v1.0
 
-F92 in the Agentic AI Library. Standalone multi agent system for curriculum architecture, outcomes, sequencing, assessment alignment, inclusion, and quality assurance.
+A governed multi-agent reference system for curriculum architecture, learning outcomes, sequencing, assessment alignment, inclusion and accessibility, evidence review, and academic quality assurance.
 
-## Agents
+## Five-agent architecture
 
-- [Outcome Architect](AGENTS/outcome_architect_agent.py)
-- [Sequence Designer](AGENTS/sequence_designer_agent.py)
-- [Assessment Aligner](AGENTS/assessment_aligner_agent.py)
-- [Inclusion Reviewer](AGENTS/inclusion_reviewer_agent.py)
-- [Quality Auditor](AGENTS/quality_auditor_agent.py)
+- Outcome Architect
+- Sequence Designer
+- Assessment Aligner
+- Inclusion Reviewer
+- Quality Auditor
 
-## Structure
+## Gold-standard academic governance
 
-[Tools](TOOLS) | [Skills](SKILLS) | [Orchestration](orchestration) | [Memory](memory) | [State](state) | [Schemas](schemas) | [Prompts](prompts) | [Config](config) | [Safety](safety) | [Observability](observability) | [Evaluations](evals) | [Benchmarks](benchmarks) | [Examples](examples) | [Tests](tests) | [Architecture](docs/ARCHITECTURE.md)
+F92 is fail closed. Curriculum recommendation release requires reviewed program goals, learning outcomes, sequencing, assessment alignment, inclusion and accessibility, evidence, quality standards, and explicit qualified-human approval.
+
+Release is blocked for outcome-alignment gaps, unresolved prerequisite or sequencing problems, assessment misalignment, accessibility gaps, material inclusion or bias risks, missing evidence provenance, infeasible workload, or unresolved quality and accreditation-standard gaps.
+
+The reference system cannot autonomously approve curricula, change academic policy or program requirements, alter student records, make accreditation claims, or submit externally on behalf of an institution.
+
+## Verification gates
+
+CI runs on Python 3.10, 3.11, and 3.12 and requires:
+
+```bash
+ruff check . --select E9,F63,F7,F82
+python -m pytest -q
+python evals/held_out.py
+python run.py
+```
+
+The behavioral verification layer includes eight direct governance tests and a 10-scenario held-out curriculum-governance suite.
